@@ -31,3 +31,6 @@ Create a subdirectory titled ‘rentalcar’. This application require ‘rental
 Create a subdirectory titled ‘finalquiz’. You are to create a web application that will display a quiz and create the necessary JavaScript to complete the following:<br/>
 -	Process the ‘FinalQuiz.xml’ file to display the multiple choice questions within the index.html page. Each question has 4 possible answers. <br/>
 -	Create a function that will grade the quiz and display the grade out of 5. Within ‘FinalQuiz.xml’ is an element ‘rightanswers’ that has a comma delimited string with the correct answers. Use CSS to create an appropriate interface.
+
+## Bootstrap_complete
+using Bootstrap and JQuery
