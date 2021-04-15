@@ -1,0 +1,76 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Anton|Dancing+Script|Josefin+Sans|Lobster|Rubik&display=swap');
+
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #005aa7, #fffde4);
+}
+
+div {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 45pt;
+    font-style: italic;
+    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: 3px 3px red;
+}
+
+fieldset {
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    width: 90%;
+    border: 1px double black;
+    border-radius: 30px;
+    background-color: white;
+    margin: 50px auto;
+}
+
+table {
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+}
+
+#result th {
+    padding: 10px;
+    font-size: 12pt;
+    border: 1px dotted gray;
+}
+
+#result td {
+    padding: 20px;
+    font-size: 12pt;
+    border: 1px dotted gray;
+}
+
+#result {
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+    border: 1px solid black;
+    margin: 50px auto;
+}
+
+input[type=button],
+input[type=reset] {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bolder;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 15pt;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: ivory;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
