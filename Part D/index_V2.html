@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Jonghyun Park">
+    <script type="text/javascript" src="main_V2.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>City Delicatessen</title>
+
+    <script type="text/javascript">
+   
+</script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>City Delicatessen</h1>
+        <form method="post" name="fm" >
+            <fieldset>
+                <legend>Date</legend>
+                <p id="time"> </p>
+            </fieldset>
+            <fieldset>
+                <legend>Customer information</legend>
+                <table id="c_info">
+                    <tr>
+                        <td><label for="fname">First Name:</label></td>
+                        <td><input type="text" id="fname" pattern="[A-Za-z -]{1,25}" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname">Last Name:</label></td>
+                        <td><input type="text" id="lname" pattern="[A-Za-z -]{1,25}" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Address: </label></td>
+                        <td> <input type="text" id="address" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="contact">Phone Number: </label></td>
+                        <td><input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Pizza</legend>
+                <table class="menu">
+                    <tr>
+                        <td><img src="./img/Super Cheesy.jpg" alt="Super-Cheesy"></td>
+                        <td><img src="./img/Extra Meaty.jpg" alt="Extra Meaty"></td>
+                        <td><img src="./img/Really Veggy.jpg" alt="Really-Veggy"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="pizza" id="super" value="Super Cheesy" checked>Super Cheesy</td>
+                        <td><input type="radio" name="pizza" id="extra" value="Extra Meaty" >Extra Meaty</td>
+                        <td><input type="radio" name="pizza" id="really" value="Really Veggy" >Really Veggy</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"> Size &nbsp; &nbsp; 
+                            <select name="p_size" id="p_size">
+                                <option value="8.50" selected>Small</option>
+                                <option value="11.50">Medium</option>
+                                <option value="14.50">Large</option>
+                                <option value="16.50">Extra Large</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Quantity &nbsp; &nbsp; 
+                            <input type="number" id="p_quantity" name="p_quantity" min="0" max="100" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"> Add any or all of these extra toppings at $1.75 for each</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="checkbox" name="Cheese" value="Extra Cheese">Extra Cheese &nbsp; &nbsp; &nbsp; &nbsp; 
+                            <input type="checkbox" name="Pepperoni" value="Pepperoni" >Pepperoni &nbsp; &nbsp; &nbsp; &nbsp; 
+                            <input type="checkbox" name="Mushrooms" value="Mushrooms">Mushrooms &nbsp; &nbsp; &nbsp; &nbsp; 
+                            <input type="checkbox" name="Bacon" value="Bacon" >Bacon &nbsp; &nbsp; &nbsp; &nbsp; 
+                            <input type="checkbox" name="Olives" value="Olives">Olives
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Sandwiches</legend>
+                <table class="menu">
+                    <tr>
+                        <td><img src="./img/All Garden Vegetarian.jpg" alt="All Garden Vegetarian"></td>
+                        <td><img src="./img/Big Beef on a Bun.jpg" alt="Big Beef on a Bun"></td>
+                        <td><img src="./img/Mixed Grill.jpg" alt="Mixed Grill"></td>
+                        <td><img src="./img/Grilled Pork.jpg" alt="Grilled Pork"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="sandwich" id="all" value="All Garden Vegetarian"  checked>All Garden Vegetarian</td>
+                        <td><input type="radio" name="sandwich" id="big" value="Big Beef on a Bun" >Big Beef on a Bun</td>
+                        <td><input type="radio" name="sandwich" id="mixed" value="Mixed Gril"> Mixed Grill</td>
+                        <td><input type="radio" name="sandwich" id="grilled" value="Grilled Pork">Grilled Pork</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Quantity &nbsp; &nbsp; 
+                            <input type="number" id ="s_quantity" name="s_quantity" min="0" max="100" value="0">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Drink Choice</legend>
+                <table class="menu">
+                    <tr>
+                        <td><input type="radio" name="drink" value="Cola" checked>Cola</td>
+                        <td><input type="radio" name="drink" value="Orange" >Orange</td>
+                        <td><input type="radio" name="drink" value="Lemon" >Lemon</td>
+                        <td><input type="radio" name="drink" value="Rootbeer" >Rootbeer</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"> Size &nbsp; &nbsp; 
+                            <select name="d_size" id="d_size">
+                                <option value="1.25">Small</option>
+                                <option value="1.75">Medium</option>
+                                <option value="2.0">Large</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Quantity &nbsp; &nbsp; 
+                            <input type="number" id="d_quantity" name="d_quantity" min="0" max="100" value="0">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <div class="bottom">
+                <input type="button" name="submit" value="SUBMIT" onclick="reg();">
+                <input type="reset"  name="reset" value="CLEAR">
+            </div>
+        </form>
+        <p id="ordered"></p>
+    </div>
+
+</body>
+
+</html>
