@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jonghyun Park">
+    <script src="converter.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Currency Converter</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="glow"> Currency Converter</h1>
+        <fieldset>
+            <table>
+                <tr>
+                    <td colspan="2">Last Updated: &nbsp; &nbsp; 2020-02-19 23:52 UTC</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong> Currency I have: </strong></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="before" id="euro" value="Euro">Euro &nbsp; &nbsp; &nbsp;
+                        &nbsp;
+                        <input type="radio" name="before" id="us" value="US Dollar">US Dollar &nbsp; &nbsp; &nbsp;
+                        &nbsp;
+                        <input type="radio" name="before" id="uk" value="UK Pound Sterling">UK Pound Sterling &nbsp;
+                        &nbsp; &nbsp;
+                        &nbsp;
+                        <input type="radio" name="before" id="yen" value="Japanese Yen">Japanese Yen &nbsp; &nbsp;
+                        &nbsp; &nbsp;
+                        <input type="radio" name="before" id="cad" value="Canadian Dollar">Canadian Dollar
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong> Currency I want: </strong></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="after" id="euro1" value="Euro">Euro &nbsp; &nbsp; &nbsp;
+                        &nbsp;
+                        <input type="radio" name="after" id="us1" value="US Dollar">US Dollar &nbsp; &nbsp; &nbsp;
+                        &nbsp;
+                        <input type="radio" name="after" id="uk1" value="UK Pound Sterling">UK Pound Sterling &nbsp;
+                        &nbsp; &nbsp;
+                        &nbsp;
+                        <input type="radio" name="after" id="yen1" value="Japanese Yen">Japanese Yen &nbsp; &nbsp;
+                        &nbsp; &nbsp;
+                        <input type="radio" name="after" id="cad1" value="Canadian Dollar">Canadian Dollar
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong> How much money?</strong> &nbsp; &nbsp; <input type="number" name="amount" id="amount"
+                            step="1" ></td>
+                </tr>
+            </table>
+            </fieldset>
+                <input type="button" value="Covert" onclick="AmountConverter();">
+            <fieldset>
+            <table id="result">
+                <tr>
+                    <td>Cyrrency on hand</td>
+                    <td>Amount</td>
+                    <td>Convert to</td>
+                    <td>Conversion Value</td>
+                </tr>
+                <tr>
+                    <td id="hand"></td>
+                    <td id="mount"></td>
+                    <td id="convert"></td>
+                    <td id="convertAmount"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jonghyun Park">
+    <script src="order.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>New City Bakery</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="glow">New City Bakery</h1>
+            <h5>1301-16 Avenue NW
+                Calgary AB, T2M 0L4
+                Toll-free: 1.877.284.7248</h5>
+        </header>
+        <div class="grid">
+            <div class="gridOne">
+                <form id="order" onsubmit="order(); return false">
+                    <fieldset>
+                        <legend>Customer information</legend>
+                        <table id="info">
+                            <tr>
+                                <td colspan="2" id="date"> </td>
+                            </tr>
+                            <tr>
+                                <td><label for="fname">First Name: </label></td>
+                                <td><input type="text" id="fname" pattern="[A-Za-z -]{1,25}"
+                                        placeholder="Enter First name" required autofocus></td>
+                            </tr>
+                            <tr>
+                                <td><label for="lname">Last Name: </label></td>
+                                <td><input type="text" id="lname" pattern="[A-Za-z -]{1,25}"
+                                        placeholder="Enter Last name" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="address">Address: </label></td>
+                                <td> <input type="text" id="address" placeholder="Enter address" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="postalcode">Postal code: </label></td>
+                                <td><input type="text" id="postalcode"
+                                        pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
+                                        placeholder="Enter postal code (A0A 1B1)" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="phone">Phone Number: </label></td>
+                                <td><input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                        placeholder="123-456-7890" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">E-mail: </label></td>
+                                <td><input type="email" id="email" placeholder="example@site.net"
+                                        pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*"
+                                        required>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Choose Your Cake</legend>
+                        <table class="cake">
+                            <tr>
+                                <td><img src="./img/03.jpg" alt="sheet"></td>
+                                <td><img src="./img/04.jpg" alt="round"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="cake" id="sheet" value="Sheet Cake"
+                                        onclick="change(this)"> Sheet Cake </td>
+                                <td><input type="radio" name="cake" id="round" value="Round Cake"
+                                        onclick="change(this)"> Round Cake </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Make Your Cake</legend>
+
+                        <table>
+                            <tr>
+                                <td colspan="2">How many layer do you want?</td>
+                                <td> <input type="radio" name="layer" id="S_01" value="1 Layer"> 1 Layer
+                                    <input type="radio" name="layer" id="S_02" value="2 Layers"> 2 Layers
+                                    <input type="radio" name="layer" id="S_03" value="3 Layers"> 3 Layers</td>
+                            </tr>
+                            <tr>
+                                <td>Size </td>
+                                <td colspan="2">
+                                    Width: &nbsp; &nbsp; <input type="number" id="width" name="width" min="30" max="45"
+                                        step="1" value="30"><br><br>
+                                    Lenght: &nbsp; &nbsp; <input type="number" id="length" name="length" min="30"
+                                        max="60" step="1" value="30"> <br><br>
+                                    Radius: &nbsp; &nbsp; <input type="number" id="radius" name="radius" min="15"
+                                        max="30" step="1" value="15">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Add Topping </td>
+                                <td colspan="2">
+                                    <input type="checkbox" id="cream" name="cream" value="Cream Cheese icing">Cream
+                                    Cheese <br><br>
+                                    <input type="checkbox" id="fruit" name="fruit"
+                                        value="Fruit and Almonds topping">Fruit and
+                                    Almonds topping <br><br>
+                                    <input type="checkbox" id="fruit_jam" name="fruit_jam" value="Fruit jam filing between
+                                        layer">Fruit jam filing between layer
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <div class="bottom">
+                        <input type="submit" value="ORDER">
+                        <input type="reset" value="CLEAR">
+                    </div>
+                </form>
+            </div>
+            <div class="gridTwo">
+                <fieldset>
+                    <legend>Order Information</legend>
+                    <p id="ordered"></p>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
